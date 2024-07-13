@@ -33,6 +33,10 @@ fn main() {
             .define("WAMR_BUILD_LIBC_WASI", "1")
             // `nostdlib`
             .define("WAMR_BUILD_LIBC_BUILTIN", "1")
+
+            .define("WAMR_DISABLE_HW_BOUND_CHECK", "1")
+            .define("WAMR_DISABLE_STACK_HW_BOUND_CHECK", "1")
+
             .build_target("iwasm_static")
             .build();
 
